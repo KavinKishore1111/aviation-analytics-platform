@@ -1,0 +1,4 @@
+rows: 8760
+first: 2025-08-01T00:00
+last: 2026-07-31T23:00
+nulls: {'temperature_2m': 0, 'precipitation': 0, 'wind_speed_10m': 0, 'relative_humidity_2m': 0}

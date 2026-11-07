@@ -1,0 +1,20 @@
+============================================================
+CHECK 1 ù US bounding box
+============================================================
+Airports outside US bbox or missing coords: 31
+python : Traceback (most recent call last):
+At line:2 char:1
++ python profiling\verify_airport_mapping.py > profiling\mapping_verifi ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Kavin Kishore\Desktop\Code\airportAnalysis\profiling\verify_airport_mapping.py", line 15, in <module>
+    print(not_us[["bts_iata", "bts_city", "bts_state",
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  "ourairports_ident", "ourairports_city", "lat", "lon"]].to_string())
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Kavin Kishore\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0121' in position 2071: character maps to <undefined>

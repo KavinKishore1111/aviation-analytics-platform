@@ -1,0 +1,10 @@
+python : Traceback (most recent call last):
+At line:3 char:1
++ python profiling\weather_poc.py            > profiling\weather_poc_ou ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\Kavin Kishore\Desktop\Code\airportAnalysis\profiling\weather_poc.py", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'

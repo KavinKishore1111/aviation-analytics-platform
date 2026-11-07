@@ -1,0 +1,129 @@
+﻿Rows with CANCELLATION_CODE: 11313
+Of those, CANCELLED distribution:
+CANCELLED
+1.00    11313
+Name: count, dtype: int64
+
+Cancellation code values:
+CANCELLATION_CODE
+B    5274
+A    3119
+C    2920
+Name: count, dtype: int64
+
+Rows with CANCELLED=1: 0
+Their CANCELLATION_CODE null rate: nan
+ARR_DEL15 values:
+ARR_DEL15
+0.00    434571
+1.00    159636
+NaN      14182
+Name: count, dtype: int64
+
+ARR_DELAY stats by ARR_DEL15:
+              count       mean         std   min   25%   50%   75%     max
+ARR_DEL15                                                                 
+0.00       434571.0  -9.879902   11.589497 -93.0 -18.0 -10.0  -2.0    14.0
+1.00       159636.0  78.159826  104.097490  15.0  26.0  47.0  91.0  4381.0
+
+DEP_DELAY stats by DEP_DEL15:
+              count       mean         std   min   25%   50%   75%     max
+DEP_DEL15                                                                 
+0.00       437667.0  -2.993820    6.251961 -42.0  -7.0  -4.0   0.0    14.0
+1.00       160067.0  78.010296  105.193948  15.0  26.0  46.0  90.0  4380.0
+SHAPE: (608389, 32)
+COLUMNS: 32
+
+=== NULL RATES ===
+                       null_count  null_rate_%
+CANCELLATION_CODE          597076        98.14
+LATE_AIRCRAFT_DELAY        448753        73.76
+CARRIER_DELAY              448753        73.76
+WEATHER_DELAY              448753        73.76
+NAS_DELAY                  448753        73.76
+SECURITY_DELAY             448753        73.76
+ARR_DELAY                   14182         2.33
+ARR_DELAY_NEW               14182         2.33
+ARR_DELAY_NUM               14182         2.33
+ARR_DEL15                   14182         2.33
+ARR_TIME                    11774         1.94
+DEP_DELAY_NEW               10655         1.75
+DEP_DEL15                   10655         1.75
+DEP_DELAY                   10655         1.75
+DEP_DELAY_NUM               10655         1.75
+DEP_TIME                    10615         1.74
+CRS_DEP_TIME                    0         0.00
+DEST                            0         0.00
+DEST_CITY_NAME                  0         0.00
+DEST_STATE_ABR                  0         0.00
+DEST_AIRPORT_ID                 0         0.00
+ORIGIN                          0         0.00
+ORIGIN_CITY_NAME                0         0.00
+ORIGIN_STATE_ABR                0         0.00
+OP_CARRIER_FL_NUM               0         0.00
+OP_CARRIER_AIRLINE_ID           0         0.00
+OP_UNIQUE_CARRIER               0         0.00
+ORIGIN_AIRPORT_ID               0         0.00
+FL_DATE                         0         0.00
+CRS_ARR_TIME                    0         0.00
+CANCELLED                       0         0.00
+DIVERTED                        0         0.00
+
+=== CANCELLED ===
+CANCELLED
+0.00    597076
+1.00     11313
+Name: count, dtype: int64
+CANCELLED
+0.00    98.14
+1.00     1.86
+Name: proportion, dtype: float64
+
+=== DIVERTED ===
+DIVERTED
+0.00    605520
+1.00      2869
+Name: count, dtype: int64
+DIVERTED
+0.00    99.53
+1.00     0.47
+Name: proportion, dtype: float64
+
+=== CANCELLATION_CODE (CANCELLED=1 only) ===
+Series([], Name: count, dtype: int64)
+
+=== DELAY CAUSE NON-NULL COUNTS ===
+CARRIER_DELAY: 159636 non-null
+WEATHER_DELAY: 159636 non-null
+NAS_DELAY: 159636 non-null
+SECURITY_DELAY: 159636 non-null
+LATE_AIRCRAFT_DELAY: 159636 non-null
+
+Delay-cause populated AND ARR_DEL15=1 : 0
+Delay-cause populated AND ARR_DEL15!=1: 159636
+ARR_DEL15=1 but NO delay cause         : 0
+
+Distinct ORIGIN_AIRPORT_ID: 352
+Distinct DEST_AIRPORT_ID  : 352
+Union of airport IDs      : 352
+Distinct ORIGIN (IATA)    : 352
+Distinct DEST   (IATA)    : 352
+Distinct OP_UNIQUE_CARRIER: 12
+OP_UNIQUE_CARRIER
+WN    116362
+DL     91186
+AA     84271
+OO     75426
+UA     74078
+AS     31385
+YX     31242
+MQ     29200
+B6     23729
+OH     21191
+F9     20314
+G4     10005
+Name: count, dtype: int64
+
+FL_DATE parse failures: 0
+FL_DATE min: 2026-08-01 00:00:00
+FL_DATE max: 2026-08-31 00:00:00
